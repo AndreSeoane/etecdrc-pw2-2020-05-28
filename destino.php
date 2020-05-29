@@ -49,6 +49,8 @@ if(isset  ($_POST['hdnescondido'])){
   $v_erro = $v_erro . " Erro ao receber campos de controle repita o processo por favor!";
 }
 
+$v_modulo = $_POST["cmbmodulo"]; 
+
 ?>
 
 <html>
@@ -94,7 +96,31 @@ if(isset  ($_POST['hdnescondido'])){
               <?php echo $v_erro; ?>      
           </p>
         </div>
-      <?php } ?>
+      <?php 
+      }
+      else{
+        // Material mais denso sobre redirecionamento 
+        // https://br.ccm.net/faq/128-redirecionamento-php-redirect-header
+
+        switch ($v_modulo){
+          case "1" : header('Location: moduloPrimeiro.php');
+          break; 
+          case "2" : header('Location: segundoModulo.php');
+          break; 
+          case "3" : header('Location: formandos.php');
+          break;
+          default: header('Location: index.php');
+          break; 
+
+        }
+
+        
+      
+      }
+      
+      
+      
+       ?>
 
    
   </body>

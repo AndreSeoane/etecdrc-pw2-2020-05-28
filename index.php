@@ -12,7 +12,16 @@
 
 
     <input id="hdnescondido" name="hdnescondido" type="hidden" value="Vale Alguma Coisa esse Escondidinho!!" /> 
+    <br>    <br>
+    
+    <label>Módulo:</label>
+    <select id="cmbmodulo" name="cmbmodulo"> 
+      <option value="-1" selected  disabled>Selecione...</option>
+      <option value="1">1º Módulo</option>
+      <option value="2">2º Módulo</option>
+      <option value="3">3º Módulo</option>
 
+    </select>
 
     <hr>
     <button id="btnenviarnotas" name="btnenviarnotas" value="Enviar Notas" > Enviar Notas </button> 
